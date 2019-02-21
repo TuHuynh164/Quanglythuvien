@@ -7,9 +7,9 @@
                         <div class="page-breadcrumb">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
-                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Tables</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Data Tables</li>
+                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Quảng lý sách</a></li>
+                                    <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Danh sách tên sách</a></li>
+                                    <!-- <li class="breadcrumb-item active" aria-current="page">Data Tables</li> -->
                                 </ol>
                             </nav>
                         </div>
@@ -19,12 +19,13 @@
             <div class="row">
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                     <div class="card">
+                        
                         <!-- <h5 class="card-header">Basic Table</h5>
                         <div id="custom-search" class="search-bar">
                             <input class="form-control  _search" type="text" placeholder="Search for books here...">
                         </div> -->
                         
-                        <div class="card-body"> <button type="button" class="btn btn-outline-primary add_btn" data-toggle="modal" data-target="#myModal"><i class="far fa-plus-square"></i> Thêm tên sách mới</button></div>
+                        <div class="card-body"> <button type="button" class="btn btn-outline-primary add_btn1" data-toggle="modal" data-target="#myModal1"><i class="far fa-plus-square"></i> Thêm tên sách mới</button></div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-striped table-bordered first">

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>Choices</title>
+
+  <link rel="stylesheet" href="../assets/choices/choices.min.css?version=6.0.0">
+  <script src="../assets/choices/choices.min.js?version=6.0.0"></script>
+  <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<body>
+    <select data-placeholder="Select Picture..." class="chosen-select" style="width:250px;" id="picturegallery" tabindex="2">
+        <option value="" selected="selected"></option>
+        <option value="x">remove me</option>
+    </select>
+    <button id="a">aaaaaaaaaaaa</button>
+
+    <script>
+
+      $("#a").click(function(){
+        alert("aaaaaaaaaaaa");
+        $('#picturegallery').empty(); //remove all child nodes
+        var newOption = $('<option value="1">test</option>');
+        $('#picturegallery').append(newOption);
+        $('#picturegallery').trigger("liszt:updated")
+      })
+      var secondElement = new Choices('#picturegallery', { allowSearch: false }).setValue();
+    </script>
+</body>
+</html>

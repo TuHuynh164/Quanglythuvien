@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+  <title>Choices</title>
+
+  <link rel="stylesheet" href="../assets/choices/choices.min.css?version=6.0.0">
+  <script src="../assets/choices/choices.min.js?version=6.0.0"></script>
+
+</head>
+
+<body>
+  <select name="demo-2" id="demo-2" placeholder="This is a placeholder" multiple>
+    <option value="Dropdown item 1">Dropdown item 1</option>
+    <option value="Dropdown item 2">Dropdown item 2</option>
+    <option value="Dropdown item 3" >Dropdown item 3</option>
+    <option value="Dropdown item 4" >Dropdown item 4</option>
+  </select>
+<script>
+var secondElement = new Choices('#demo-2', { allowSearch: false }).setValue();
+
+</script>
+
+</html>

@@ -1,0 +1,16 @@
+.goback{
+    cursor: pointer;
+    font-size: 30px;
+    right: 50px;
+    margin-top: 10px;
+    position: absolute;
+}
+.goback:hover{
+    color: black;
+}
+.fblue{
+    color:blue;
+}
+.cursor{
+    cursor: pointer;
+}

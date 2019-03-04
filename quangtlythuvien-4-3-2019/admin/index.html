@@ -1,0 +1,760 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="../assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/libs/css/style.css">
+    <link rel="stylesheet" href="../assets/libs/css/mystyle.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="../assets/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="../assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../assets/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="../assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+
+
+    <link rel="stylesheet" href="../assets/choices/choices.min.css?version=6.0.0">
+    <script src="../assets/choices/choices.min.js?version=6.0.0"></script>
+    
+    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+</head>
+<style>
+    .cursor {
+        cursor: pointer;
+    }
+    .modal { overflow-y: auto }
+    .profile,.xoa{
+        cursor: pointer;
+    }
+    .profile:hover,
+    .xoa:hover{
+        color: black;
+    }
+    /* 
+    input:invalid {
+        border-color: red;
+    }
+
+    input,
+    input:valid {
+        border-color: #ccc;
+    } */
+</style>
+
+<body>
+    <!-- ============================================================== -->
+    <!-- main wrapper -->
+    <!-- ============================================================== -->
+    <div class="dashboard-main-wrapper">
+        <!-- ============================================================== -->
+        <!-- navbar -->
+        <!-- ============================================================== -->
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" href="index.html">Concept</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+                        <li class="nav-item">
+                            <div id="custom-search" class="top-search-bar">
+                                <input class="form-control _search" type="text" placeholder="Search..">
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown notification">
+                            <a class="nav-link nav-icons" href="#" id="navbarDropdownMenuLink1" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><i class="fas fa-fw fa-bell"></i> <span
+                                    class="indicator"></span></a>
+                            <ul class="dropdown-menu dropdown-menu-right notification-dropdown">
+                                <li>
+                                    <div class="notification-title"> Notification</div>
+                                    <div class="notification-list">
+                                        <div class="list-group">
+                                            <a href="#" class="list-group-item list-group-item-action active">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img
+                                                            src="../assets/images/avatar-2.jpg" alt=""
+                                                            class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span
+                                                            class="notification-list-user-name">Jeremy
+                                                            Rakestraw</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img
+                                                            src="../assets/images/avatar-3.jpg" alt=""
+                                                            class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span
+                                                            class="notification-list-user-name">John
+                                                            Abraham </span>is now following you
+                                                        <div class="notification-date">2 days ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img
+                                                            src="../assets/images/avatar-4.jpg" alt=""
+                                                            class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span
+                                                            class="notification-list-user-name">Monaan
+                                                            Pechi</span> is watching your main repository
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <a href="#" class="list-group-item list-group-item-action">
+                                                <div class="notification-info">
+                                                    <div class="notification-list-user-img"><img
+                                                            src="../assets/images/avatar-5.jpg" alt=""
+                                                            class="user-avatar-md rounded-circle"></div>
+                                                    <div class="notification-list-user-block"><span
+                                                            class="notification-list-user-name">Jessica
+                                                            Caruso</span>accepted your invitation to join the team.
+                                                        <div class="notification-date">2 min ago</div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="list-footer"> <a href="#">View all notifications</a></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown connection">
+                            <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"> <i class="fas fa-fw fa-th"></i> </a>
+                            <ul class="dropdown-menu dropdown-menu-right connection-dropdown">
+                                <li class="connection-list">
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="../assets/images/github.png"
+                                                    alt="">
+                                                <span>Github</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="../assets/images/dribbble.png"
+                                                    alt=""> <span>Dribbble</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="../assets/images/dropbox.png"
+                                                    alt=""> <span>Dropbox</span></a>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img
+                                                    src="../assets/images/bitbucket.png" alt="">
+                                                <span>Bitbucket</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img
+                                                    src="../assets/images/mail_chimp.png" alt=""><span>Mail
+                                                    chimp</span></a>
+                                        </div>
+                                        <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
+                                            <a href="#" class="connection-item"><img src="../assets/images/slack.png"
+                                                    alt="">
+                                                <span>Slack</span></a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="conntection-footer"><a href="#">More</a></div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown nav-user">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                    src="../assets/images/avatar-1.jpg" alt=""
+                                    class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
+                                aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    <span class="status"></span><span class="ml-2">Available</span>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-user mr-2"></i>Account</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-cog mr-2"></i>Setting</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- menu here//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <div class="nav-left-sidebar sidebar-dark">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-1" aria-controls="submenu-1"><i
+                                        class="fa fa-fw fa-user-circle"></i>Quảng Lý Sách
+                                    <span class="badge badge-success">6</span></a>
+                                <div id="submenu-1" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link list_book cursor" data-toggle="collapse"
+                                                aria-expanded="false" data-target="#submenu-1-2"
+                                                aria-controls="submenu-1-2">Danh sách tên sách</a>
+                                            <div id="submenu-1-2" class="collapse submenu" style="">
+                                                <ul class="nav flex-column">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link list_tacgia cursor">Danh sách tác giả </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link list_nxb cursor">Danh sách nhà xuất bản </a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link list_theloai cursor">Danh sách thể loại
+                                                            sách</a>
+                                                    </li>
+                                                    <li class="nav-item">
+                                                        <a class="nav-link list_vitri cursor">Danh sách vị trí
+                                                            sách</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Cập nhập sách mới về</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Xử lý kỹ thuật</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-2" aria-controls="submenu-2"><i
+                                        class="fa fa-fw fa-rocket"></i>Bạn đọc</a>
+                                <div id="submenu-2" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link list_bandoc cursor">Danh sách bạn đọc</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link muon_sach cursor">Cho mượn sách</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link tra_sach cursor">Trả sách</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link qua_han cursor">Thông báo quá hạn</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-2" aria-controls="submenu-2"><i
+                                        class="fa fa-fw fa-rocket"></i>UI Elements</a>
+                                <div id="submenu-2" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link">Cards <span class="badge badge-secondary">New</span></a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">General</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Carousel</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">List Group</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Typography</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Accordions</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Tabs</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-3" aria-controls="submenu-3"><i
+                                        class="fas fa-fw fa-chart-pie"></i>Chart</a>
+                                <div id="submenu-3" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link">C3 Charts</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Chartist Charts</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Chart</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Morris</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Sparkline</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Guage</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-4" aria-controls="submenu-4"><i
+                                        class="fab fa-fw fa-wpforms"></i>Forms</a>
+                                <div id="submenu-4" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link">Form Elements</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Parsely Validations</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Multiselect</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Date Picker</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Bootstrap Select</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                    data-target="#submenu-5" aria-controls="submenu-5"><i
+                                        class="fas fa-fw fa-table"></i>Tables</a>
+                                <div id="submenu-5" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link">General Tables</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link">Data Tables</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="dashboard-wrapper _content">
+            <!-- /////////////////////////////////////////////////// -->
+
+        </div>
+    </div>
+
+    <!-- modal ////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!-- modal 1 -->
+    <div class="modal fade" id="myModal1">  
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <!-- <h4 class="modal-title">Modal Heading</h4> -->
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body" id="modal-body-1">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form class="needs-validation form1" novalidate>
+                                        <div id="formloading1">
+
+
+                                            <!-- load form 1 -->
+
+
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                            <button class="btn btn-primary submit" type="submit">Submit form</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="display: none;" id="showmodal1" data-toggle="modal" data-target="#myModal1"> </div>
+
+    <div class="modal fade" id="myModal2">  
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <!-- <h4 class="modal-title">Modal Heading</h4> -->
+                    <button type="button" class="close close2" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" id="modal-body-1">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <form class="needs-validation form2" novalidate>
+                                        <div id="formloading2">
+
+
+                                            <!-- load form 2 ... -->
+
+
+                                        </div>
+                                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 ">
+                                            <button class="btn btn-primary submit" type="submit">Submit form</button>
+                                            <button class="btn btn-danger close2" data-dismiss="modal" type="button">Hủy</button>
+                                        </div>
+                                    </form>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- modal 2 -->
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
+    <script src="../assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <script src="../assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
+    <script src="../assets/libs/js/main-js.js"></script>
+    <!-- chart chartist js -->
+    <script src="../assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <!-- sparkline js -->
+    <script src="../assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <!-- morris js -->
+    <script src="../assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="../assets/vendor/charts/morris-bundle/morris.js"></script>
+    <!-- chart c3 js -->
+    <script src="../assets/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="../assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="../assets/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="../assets/libs/js/dashboard-ecommerce.js"></script>
+    <script>
+        $('#form').parsley();
+    </script>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            var a = document.getElementById('modal-body');
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+
+    <!-- my js //////////////////////////////////////////// -->
+    <script>
+        var tap1 = '';
+        var tap2 = '';
+        var tap3 = '';
+        var add='';
+        // var modal2='';
+        var nameprofile;
+        $(document).ready(function () {
+            // $(document).on("click","#ref",function(){
+            //     alert("adasdasds");
+            //     $('#tacgia').empty();
+            //     var newOption = $('<option value="1">test</option>');
+            //     $('#tacgia').append(newOption);
+            //     $('#tacgia').trigger("liszt:updated");
+            // })
+            // $(document).on("click",".incode",function(){
+            //     var s = $(this).parents("tr").children(":first").text();
+            //     alert(s);
+            // })
+// load////////////////////////////////////
+            $(document).on("click", ".list_book", function () {
+                tap2 = "qlsach/book/lishbook.php";
+                tap3 = '';
+                load();
+            });
+            $(".list_book").click();
+            $(document).on("click", ".list_tacgia", function () {
+                tap2 = "qlsach/tacgia/listtacgia.php";
+                tap3 = '';
+                load();
+            })
+            $(document).on("click", ".list_theloai", function () {
+                tap2 = "qlsach/theloai/listtheloai.php";
+                tap3 = '';
+                load();
+            });
+            $(document).on("click", ".list_nxb", function () {
+                tap2 = "qlsach/nhaxuatban/listnxb.php";
+                tap3 = '';
+                load();
+            });
+            $(document).on("click",".list_vitri",function(){
+                tap2 = "qlsach/vitri/listvitri.php";
+                load();
+            })
+            // duy
+            $(document).on("click", ".list_bandoc", function () {
+                tap2 = "qlbandoc/bandoc/qlbandoc.php";
+                tap3 = '';
+                load();
+            });
+
+//load profile của tác giả, thể loại, nxb
+            $(document).on("click", ".profile", function () {
+                // alert("aaaaaaaaaa")
+                var name = $(this).attr("natsort"); //natsort là tên của profile
+                var url = $(this).attr("url");  //url là đường dẫn
+                nameprofile = name;
+                profile(name, url);
+            });
+//load profile của member
+            $(document).on("click", ".profile_member", function () {
+                var name = $(this).attr("natsort"); //natsort là tên của profile
+                var url = $(this).attr("url");  //url là đường dẫn
+                var id = $(this).attr("id");
+                nameprofile = name;
+                profile_member(name, url, id);
+            });
+            $(document).on("click",".lock-card",function(){
+                control_card();
+            })
+
+//search
+            $(document).on("keyup", "._search", function () {
+                return search();
+            });
+
+// load form add
+            $(document).on("click", ".add_sach", function () {
+                loadform("#formloading1","qlsach/book/addbook.php");
+            });
+            $(document).on("click", ".add_nxb", function () {
+                loadform("#formloading1","qlsach/nhaxuatban/addnxb.php");
+            });
+            $(document).on("click",".add_tacgia",function(){
+                loadform("#formloading1","qlsach/tacgia/addtacgia.php");
+            });
+            $(document).on("click",".add_theloai",function(){
+                loadform("#formloading1","qlsach/theloai/addtheloai.php");
+            });
+            $(document).on("click",".add_vitri",function(){
+                loadform("#formloading1","qlsach/vitri/addvitri.php");
+            });
+
+            $(document).on("click", ".add_nxb2", function () {
+                loadform("#formloading2","qlsach/nhaxuatban/addnxb.php");
+            });
+            $(document).on("click", ".add_tacgia2", function(){
+                loadform("#formloading2","qlsach/tacgia/addtacgia.php");
+            });
+            $(document).on("click", ".add_theloai2", function(){
+                loadform("#formloading2","qlsach/theloai/addtheloai.php");
+            });
+            $(document).on("click", ".add_vitri2", function(){
+                loadform("#formloading2","qlsach/vitri/addvitri.php");
+            });
+            $(document).on("click",".close2",function() {
+                $("#showmodal1").click();
+            })
+
+            $(document).on("click", ".add_member_btn", function () {
+                loadform("#formloading1","qlbandoc/bandoc/addmember.php");
+            });
+// load form edit
+            $(document).on("click", ".editbook", function () {
+                // alert(editname);
+                loadformedit("qlsach/book/editbook.php",editname);
+            });
+            $(document).on("click", ".editnxb", function () {
+                // alert(editname);
+                loadformedit("qlsach/nhaxuatban/editnxb.php",editname);
+            });
+            $(document).on("click", ".edittacgia", function () {
+                // alert(editname);
+                loadformedit("qlsach/tacgia/edittacgia.php",editname);
+            });
+            $(document).on("click", ".edittl", function () {
+                // alert(editname);
+                loadformedit("qlsach/theloai/edittheloai.php",editname);
+            });
+            
+            $(document).on("click", ".editvt", function () {
+                // alert(editname);
+                loadformedit("qlsach/vitri/editvitri.php",editname);
+            });
+// thêm dữ liệu qua form
+            $(".form1").submit(function(){
+                $("#formloading2").children().remove();
+                if(tap2 == "qlsach/book/lishbook.php" || tap2 == "qlsach/nhapsach/nhapsach.php" || tap3 !="" ){
+                    return submitform();
+                }else{
+                    return submitform1();
+                }
+            });
+
+            $(".form2").submit(function(){
+                return submitform1();
+            });
+
+
+
+
+
+            $(document).on("click",".goback",function(){
+                load();
+            })
+        });
+
+
+
+
+//function load sách, tac gia, the loai, nxb////////////////////////////////////////////////////////////////////
+        function load() {
+            $('._content').children().remove();
+            $('._content').load("../data/" + tap2);
+            tap3 = '';
+        }
+        function profile(name, url) {
+            $('._content').load("../data/qlsach/" + url, {
+                name: name
+            });
+            tap3 = "qlsach/" + url;
+            
+        }
+                //duy
+        function profile_member(name, url) {
+            tap3 = "qlbandoc/" + url;
+            $('._content').load("../data/" + tap3, {
+                name: name
+            });
+            // tap3 = "qlsach/" + url;
+        }
+
+//function search
+        function search() {
+            let url;
+            if (tap3 == '') {
+                url = tap2;
+            } else {
+                url = tap3;
+            }
+            var search = $('._search').val();
+            $.ajax({
+                type: 'post',
+                url: '../data/' + url,
+                data: {
+                    search: search,
+                    name: nameprofile
+                },
+                cache: false,
+                success: function (html) {
+                    $('._content').html(html);
+                }
+            })
+            return false;
+        }
+
+// function load them thong tin
+        function loadform(a,b) {
+            add = b;
+            $(a).load("../data/" + b);
+        }
+// function load edit thong tin
+        function loadformedit(a,b) {
+            $("#formloading1").load("../data/" + a,{
+                editname:b
+            });
+        }
+        function control_card(){
+            var control = $('.lock-card').val();
+            var id = $('.id-card').text().substr(9,10);
+            var name = 
+            console.log(id);
+            // console.log(control);
+            $.ajax({
+                type: 'post',
+                url: '../data/' + "qlbandoc/bandoc/mo-khoa-the.php",
+                data: {
+                    control: control,
+                    id: id
+                },
+                cache: false,
+                success: function (a) {
+                    // alert(a);
+                    $('._content').load("../data/" + "qlbandoc/bandoc/profilemember.php", {
+                        name: nameprofile,
+                        id: id
+                    },function(){
+                        $("#product-tab-2").click(); 
+                    });
+                    
+                },
+                error: function (){
+                    alert('sai rồi');
+                }
+            })
+        }
+
+
+    </script>
+</body>
+
+</html>

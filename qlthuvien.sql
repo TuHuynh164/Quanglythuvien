@@ -2,10 +2,10 @@
 -- version 4.8.4
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th2 18, 2019 lúc 10:25 AM
--- Phiên bản máy phục vụ: 10.1.37-MariaDB
--- Phiên bản PHP: 7.3.0
+-- Host: 127.0.0.1
+-- Generation Time: Mar 08, 2019 at 06:02 AM
+-- Server version: 10.1.37-MariaDB
+-- PHP Version: 7.3.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,13 +19,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `qlthuvien`
+-- Database: `qlthuvien`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chuc_vu`
+-- Table structure for table `chuc_vu`
 --
 
 CREATE TABLE `chuc_vu` (
@@ -36,7 +36,7 @@ CREATE TABLE `chuc_vu` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loai_sach`
+-- Table structure for table `loai_sach`
 --
 
 CREATE TABLE `loai_sach` (
@@ -52,35 +52,42 @@ CREATE TABLE `loai_sach` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `loai_sach`
+-- Dumping data for table `loai_sach`
 --
 
 INSERT INTO `loai_sach` (`Id`, `Ten_sach`, `Ma_the_loai`, `Ma_NXB`, `Nam_xuat_ban`, `Kho_sach`, `Ma_vi_tri`, `Gia_sach`, `Tom_tat_noi_dung`) VALUES
-(1, 'abc', 1, 1, 1996, '12*18', 1, 30000, 'Nội dung tóm tắt của sách abc');
+(1, 'how to train your dragon', 4, 1, 1998, '12*18', 3, 40000, 'Nội dung tóm tắt của sách abc'),
+(13, 'Tuhuynh', 7, 2, 1996, '', 1, 40000, ''),
+(14, '123456', 7, 5, 1997, '12*14', 3, 45000, ''),
+(15, '1234', 7, 5, 1998, '12*15', 3, 345678, '');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `ls_tg`
+-- Table structure for table `ls_tg`
 --
 
 CREATE TABLE `ls_tg` (
   `Ma_ls` int(11) NOT NULL,
-  `Ma_tg` int(11) NOT NULL
+  `Ma_tg` int(11) NOT NULL,
+  `Id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `ls_tg`
+-- Dumping data for table `ls_tg`
 --
 
-INSERT INTO `ls_tg` (`Ma_ls`, `Ma_tg`) VALUES
-(1, 1),
-(1, 2);
+INSERT INTO `ls_tg` (`Ma_ls`, `Ma_tg`, `Id`) VALUES
+(13, 1, 126),
+(1, 3, 129),
+(1, 1, 130),
+(14, 3, 131),
+(15, 2, 132);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `muon_tra`
+-- Table structure for table `muon_tra`
 --
 
 CREATE TABLE `muon_tra` (
@@ -100,7 +107,7 @@ CREATE TABLE `muon_tra` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nguoi_muon`
+-- Table structure for table `nguoi_muon`
 --
 
 CREATE TABLE `nguoi_muon` (
@@ -109,14 +116,14 @@ CREATE TABLE `nguoi_muon` (
   `Dia_chi` varchar(50) NOT NULL,
   `Email` varchar(50) NOT NULL,
   `Ghi_chu` text NOT NULL,
-  `CMNN` int(20) NOT NULL,
-  `Ma_the` int(11) NOT NULL
+  `CMND` int(20) NOT NULL,
+  `Sdt` int(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nhan_vien`
+-- Table structure for table `nhan_vien`
 --
 
 CREATE TABLE `nhan_vien` (
@@ -131,28 +138,45 @@ CREATE TABLE `nhan_vien` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nha_xuat_ban`
+-- Table structure for table `nha_xuat_ban`
 --
 
 CREATE TABLE `nha_xuat_ban` (
   `Id` int(11) NOT NULL,
   `Ten` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `Dia_chi` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
-  `Email` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
+  `Lien_he` varchar(50) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `Thong_tin` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `nha_xuat_ban`
+-- Dumping data for table `nha_xuat_ban`
 --
 
-INSERT INTO `nha_xuat_ban` (`Id`, `Ten`, `Dia_chi`, `Email`, `Thong_tin`) VALUES
-(1, 'Tên nhà xuất bảng', 'Dia_chi', 'Email', 'Thong_tin');
+INSERT INTO `nha_xuat_ban` (`Id`, `Ten`, `Dia_chi`, `Lien_he`, `Thong_tin`) VALUES
+(1, 'tên nhà xuất bản 2', 'Dia_chi 1', 'Email 1', '              Thong_tin 1      '),
+(2, 'tên nhà xuất bản 1', 'Hà Nội', 'pax: 9823018312391823', '  eeeeeeeeee  '),
+(5, 'Nhà xuất bản TuHuynh', 'Đà Nẵng', '0962285164', '');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sach`
+-- Table structure for table `phieu_nhap`
+--
+
+CREATE TABLE `phieu_nhap` (
+  `Id` int(11) NOT NULL,
+  `Ma_phieu` int(11) NOT NULL,
+  `Ngay_nhap` date NOT NULL,
+  `Nguoi_nhap` varchar(20) NOT NULL,
+  `Ghi_chu` text NOT NULL,
+  `Nguon_nhap` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sach`
 --
 
 CREATE TABLE `sach` (
@@ -162,22 +186,23 @@ CREATE TABLE `sach` (
   `Tinh_trang` varchar(300) NOT NULL,
   `So_trang` int(4) NOT NULL,
   `So_lan_tai_bang` int(2) NOT NULL,
-  `Hien_co` int(1) NOT NULL
+  `Hien_co` int(1) NOT NULL,
+  `Ma_nhap_sach` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `sach`
+-- Dumping data for table `sach`
 --
 
-INSERT INTO `sach` (`Id`, `Ma_ISBN`, `Ma_ten_sach`, `Tinh_trang`, `So_trang`, `So_lan_tai_bang`, `Hien_co`) VALUES
-(11, '11111111111', 1, 'Tinh_trang', 100, 3, 1),
-(12, '1111111111112', 1, 'Tinh_trang 2', 101, 4, 1),
-(13, '111111111113', 1, 'Tinh_trang 3', 100, 3, 1);
+INSERT INTO `sach` (`Id`, `Ma_ISBN`, `Ma_ten_sach`, `Tinh_trang`, `So_trang`, `So_lan_tai_bang`, `Hien_co`, `Ma_nhap_sach`) VALUES
+(11, '11111111111', 1, 'Tinh_trang', 100, 3, 1, 0),
+(12, '1111111111112', 1, 'Tinh_trang 2', 101, 4, 1, 0),
+(13, '111111111113', 1, 'Tinh_trang 3', 100, 3, 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `tac_gia`
+-- Table structure for table `tac_gia`
 --
 
 CREATE TABLE `tac_gia` (
@@ -189,17 +214,18 @@ CREATE TABLE `tac_gia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `tac_gia`
+-- Dumping data for table `tac_gia`
 --
 
 INSERT INTO `tac_gia` (`Id`, `Ten_tac_gia`, `website`, `Ghi_chu`, `So_luoc_thong_tin`) VALUES
 (1, 'Ten_tac_gia', 'website', 'Ghi_chu', 'Sơ lược thông tin tác giả 1'),
-(2, 'Ten_tac_gia 2', 'aaaaaaaaaaaaaaa', 'aaaaaaaaaa', 'aaaaaaaaaaaaa');
+(2, 'Ten_tac_gia 2', 'aaaaaaaaaaaaaaa', 'aaaaaaaaaa', 'aaaaaaaaaaaaa'),
+(3, 'Huỳnh Minh Tú', 'tuhuynh.com', 'tú đẹp trai', 'ádasdadasdasdadsasdas   ');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `the_loai`
+-- Table structure for table `the_loai`
 --
 
 CREATE TABLE `the_loai` (
@@ -209,7 +235,7 @@ CREATE TABLE `the_loai` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `the_loai`
+-- Dumping data for table `the_loai`
 --
 
 INSERT INTO `the_loai` (`Id`, `Ten`, `Ma_chuyen_muc`) VALUES
@@ -230,7 +256,7 @@ INSERT INTO `the_loai` (`Id`, `Ten`, `Ma_chuyen_muc`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `the_thanh_vien`
+-- Table structure for table `the_thanh_vien`
 --
 
 CREATE TABLE `the_thanh_vien` (
@@ -243,7 +269,7 @@ CREATE TABLE `the_thanh_vien` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `user`
+-- Table structure for table `user`
 --
 
 CREATE TABLE `user` (
@@ -254,7 +280,7 @@ CREATE TABLE `user` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `user`
+-- Dumping data for table `user`
 --
 
 INSERT INTO `user` (`Id`, `Name`, `Password`, `Quyen`) VALUES
@@ -263,7 +289,7 @@ INSERT INTO `user` (`Id`, `Name`, `Password`, `Quyen`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `vi_tri`
+-- Table structure for table `vi_tri`
 --
 
 CREATE TABLE `vi_tri` (
@@ -272,163 +298,188 @@ CREATE TABLE `vi_tri` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Đang đổ dữ liệu cho bảng `vi_tri`
+-- Dumping data for table `vi_tri`
 --
 
 INSERT INTO `vi_tri` (`Id`, `Thong_tin`) VALUES
-(1, 'Thong_tin a');
+(1, 'Thong_tin 1'),
+(3, 'Thông tin 2');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `chuc_vu`
+-- Indexes for table `chuc_vu`
 --
 ALTER TABLE `chuc_vu`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Chỉ mục cho bảng `loai_sach`
+-- Indexes for table `loai_sach`
 --
 ALTER TABLE `loai_sach`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Chỉ mục cho bảng `muon_tra`
+-- Indexes for table `ls_tg`
+--
+ALTER TABLE `ls_tg`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `muon_tra`
 --
 ALTER TABLE `muon_tra`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Chỉ mục cho bảng `nguoi_muon`
+-- Indexes for table `nguoi_muon`
 --
 ALTER TABLE `nguoi_muon`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Chỉ mục cho bảng `nhan_vien`
+-- Indexes for table `nhan_vien`
 --
 ALTER TABLE `nhan_vien`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Chỉ mục cho bảng `nha_xuat_ban`
+-- Indexes for table `nha_xuat_ban`
 --
 ALTER TABLE `nha_xuat_ban`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Chỉ mục cho bảng `sach`
+-- Indexes for table `phieu_nhap`
+--
+ALTER TABLE `phieu_nhap`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `sach`
 --
 ALTER TABLE `sach`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Chỉ mục cho bảng `tac_gia`
+-- Indexes for table `tac_gia`
 --
 ALTER TABLE `tac_gia`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Chỉ mục cho bảng `the_loai`
+-- Indexes for table `the_loai`
 --
 ALTER TABLE `the_loai`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Chỉ mục cho bảng `the_thanh_vien`
+-- Indexes for table `the_thanh_vien`
 --
 ALTER TABLE `the_thanh_vien`
   ADD PRIMARY KEY (`So_the`);
 
 --
--- Chỉ mục cho bảng `user`
+-- Indexes for table `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Chỉ mục cho bảng `vi_tri`
+-- Indexes for table `vi_tri`
 --
 ALTER TABLE `vi_tri`
   ADD PRIMARY KEY (`Id`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `chuc_vu`
+-- AUTO_INCREMENT for table `chuc_vu`
 --
 ALTER TABLE `chuc_vu`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `loai_sach`
+-- AUTO_INCREMENT for table `loai_sach`
 --
 ALTER TABLE `loai_sach`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT cho bảng `muon_tra`
+-- AUTO_INCREMENT for table `ls_tg`
+--
+ALTER TABLE `ls_tg`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=133;
+
+--
+-- AUTO_INCREMENT for table `muon_tra`
 --
 ALTER TABLE `muon_tra`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `nguoi_muon`
+-- AUTO_INCREMENT for table `nguoi_muon`
 --
 ALTER TABLE `nguoi_muon`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `nhan_vien`
+-- AUTO_INCREMENT for table `nhan_vien`
 --
 ALTER TABLE `nhan_vien`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `nha_xuat_ban`
+-- AUTO_INCREMENT for table `nha_xuat_ban`
 --
 ALTER TABLE `nha_xuat_ban`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT cho bảng `sach`
+-- AUTO_INCREMENT for table `phieu_nhap`
+--
+ALTER TABLE `phieu_nhap`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `sach`
 --
 ALTER TABLE `sach`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT cho bảng `tac_gia`
+-- AUTO_INCREMENT for table `tac_gia`
 --
 ALTER TABLE `tac_gia`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT cho bảng `the_loai`
+-- AUTO_INCREMENT for table `the_loai`
 --
 ALTER TABLE `the_loai`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- AUTO_INCREMENT cho bảng `the_thanh_vien`
+-- AUTO_INCREMENT for table `the_thanh_vien`
 --
 ALTER TABLE `the_thanh_vien`
   MODIFY `So_the` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT cho bảng `user`
+-- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT cho bảng `vi_tri`
+-- AUTO_INCREMENT for table `vi_tri`
 --
 ALTER TABLE `vi_tri`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

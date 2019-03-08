@@ -704,13 +704,14 @@
             tap3 = "qlsach/" + url;
 
         }
-        //duy
-        function profile_member(name, url) {
+        //duy 08-03-19
+        function profile_member(name, url, id) {
             tap3 = "qlbandoc/" + url;
             $('._content').load("../data/" + tap3, {
-                name: name
+                name: name,
+                id: id
             });
-            // tap3 = "qlsach/" + url;
+            return name;
         }
 
         //function search
